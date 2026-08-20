@@ -17,7 +17,7 @@
   --mhs-ink: #0e2440;
   --mhs-muted: #56749b;           /* 冷灰蓝文字 */
   /* 统一响应式内容宽度：随浏览器屏幕流动，三区块(banner/english/卡片)严格同宽 */
-  --mhs-content-w: min(1320px, calc(100% - clamp(24px, 4vw, 56px)));
+  --mhs-content-w: min(1320px, calc(100vw - clamp(48px, 8vw, 112px)));
 }
 
 /* 通用内容容器（hero/english banner 用同一响应式宽度，彼此对齐）
