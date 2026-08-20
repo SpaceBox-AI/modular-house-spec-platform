@@ -20,11 +20,11 @@
   --mhs-content-w: min(1320px, calc(100% - clamp(24px, 4vw, 56px)));
 }
 
-/* 通用内容容器（全部对齐同一响应式宽度）
-   index.md 里三个区块的 inner/grid 统一套此宽度，两侧彼此对齐 */
+/* 通用内容容器（hero/english banner 用同一响应式宽度，彼此对齐）
+   note: .mhs-features-grid 单独定义完整规则（见下），不在此组，
+   以避免两条同名规则在 CSS 层叠时宽度/布局属性相互干扰导致排列错位 */
 .mhs-hero-inner,
-.mhs-english-inner,
-.mhs-features-grid {
+.mhs-english-inner {
   width: var(--mhs-content-w);
   max-width: 100%;
   margin: 0 auto;
@@ -187,9 +187,13 @@
 }
 .mhs-features-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* 四等分：每列 = banner 宽度 / 4，等宽铺满 */
   gap: 20px;
-  /* 宽度/居中由统一容器 .mhs-features-grid 规则控制 */
+  /* 宽度/居中：与 banner(hero-inner) 严格同宽并水平居中，四框均匀铺满 */
+  width: var(--mhs-content-w);
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
   padding: 0;
 }
 /* 断点：桌面 4 列 → 平板 2 列 → 手机 1 列，随屏适配 */
