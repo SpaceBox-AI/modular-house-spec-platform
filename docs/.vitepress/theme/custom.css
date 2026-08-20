@@ -16,6 +16,19 @@
   --mhs-cyan-soft: rgba(33,197,216,0.12);
   --mhs-ink: #0e2440;
   --mhs-muted: #56749b;           /* 冷灰蓝文字 */
+  /* 统一响应式内容宽度：随浏览器屏幕流动，三区块(banner/english/卡片)严格同宽 */
+  --mhs-content-w: min(1320px, calc(100% - clamp(24px, 4vw, 56px)));
+}
+
+/* 通用内容容器（全部对齐同一响应式宽度）
+   index.md 里三个区块的 inner/grid 统一套此宽度，两侧彼此对齐 */
+.mhs-hero-inner,
+.mhs-english-inner,
+.mhs-features-grid {
+  width: var(--mhs-content-w);
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /* 全局冷色底 */
@@ -67,9 +80,8 @@
 
 .mhs-hero-inner {
   position: relative;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 28px;
+  /* 宽度/居中/padding 由统一容器 .mhs-hero-inner 规则控制 */
+  padding: 0;
 }
 
 /* 层级：主标题 > 品牌 > 副标题 */
@@ -147,7 +159,8 @@
 /* ---------- English Banner ---------- */
 .mhs-english { margin: 0; padding: 0; background: #fff; }
 .mhs-english-inner {
-  max-width: 1280px; margin: 0 auto; padding: 40px 28px 34px;
+  /* 宽度/居中 由统一容器控制 */
+  padding: 40px 0 34px;
   border-bottom: 1px solid rgba(14,36,64,0.08);
 }
 .mhs-english .mhs-en-title {
@@ -165,64 +178,71 @@
 }
 .mhs-english .mhs-en-sub .sep { color: var(--mhs-cyan); margin: 0 5px; }
 
-/* ---------- 四大业务模块：横向一排、总宽与 hero 横幅对齐 ---------- */
+/* ---------- 四大业务模块：四个等宽描边框，两侧贴 Banner 对齐，随屏适配 ---------- */
 .mhs-features {
   max-width: 100%;
   margin: 0;
-  padding: 0;
-  background: var(--mhs-steel-050);
+  padding: 52px 0 20px;
+  background: linear-gradient(180deg, #f0f5fb 0%, #eef3fb 100%);
 }
 .mhs-features-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  /* 与 .mhs-hero-inner 完全一致：max-width + 水平 padding 对齐主标题横幅 */
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 48px 28px 8px;
-  width: 100%;
-  box-sizing: border-box;
+  gap: 20px;
+  /* 宽度/居中由统一容器 .mhs-features-grid 规则控制 */
+  padding: 0;
 }
-/* 更宽屏：banner 与卡片同步放宽 */
-@media (min-width: 1440px) {
-  .mhs-hero-inner, .mhs-english-inner, .mhs-features-grid { max-width: 1520px; }
-}
-@media (max-width: 1100px) { .mhs-features-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 640px)  { .mhs-features-grid { grid-template-columns: 1fr; padding-left: 20px; padding-right: 20px; } }
+/* 断点：桌面 4 列 → 平板 2 列 → 手机 1 列，随屏适配 */
+@media (max-width: 1080px) { .mhs-features-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; } }
+@media (max-width: 600px)  { .mhs-features-grid { grid-template-columns: 1fr; gap: 14px; } }
 
+/* “四个框”样式：冷色线性描边框，科技面板感 */
 .mhs-card {
-  background: #fff;
-  border: 1px solid rgba(14,70,116,0.14);
-  border-radius: 16px;
-  padding: 34px 30px;
-  box-shadow: 0 4px 18px rgba(13,52,88,0.08);
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-  border-top: 3px solid var(--mhs-cyan);
+  background: rgba(255,255,255,0.6);
+  border: 1.5px solid rgba(29,78,143,0.18);
+  border-radius: 14px;
+  padding: 26px 24px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color .18s ease, transform .18s ease, background .18s ease;
+}
+.mhs-card::before {
+  content: "";
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--mhs-cyan), var(--mhs-cyan-soft));
 }
 .mhs-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 34px rgba(13,52,88,0.16);
-  border-top-color: #1493c9;
+  transform: translateY(-3px);
+  border-color: var(--mhs-cyan);
+  background: rgba(255,255,255,0.92);
 }
 .mhs-card .mhs-card-no {
   font-size: 11px; font-weight: 750; letter-spacing: 0.14em;
   color: var(--mhs-cyan); margin-bottom: 12px;
 }
 .mhs-card .mhs-card-title {
-  font-size: 21px; font-weight: 750; color: var(--mhs-steel-800); margin-bottom: 12px;
+  font-size: 20px; font-weight: 750; color: var(--mhs-steel-800); margin-bottom: 14px;
 }
 .mhs-card .mhs-card-line {
-  display: flex; align-items: center; gap: 9px;
+  display: flex; align-items: flex-start; gap: 9px;
   font-size: 14px; color: var(--mhs-muted); margin-bottom: 10px;
   line-height: 1.55;
 }
 .mhs-card .mhs-card-line::before {
   content: ""; width: 15px; height: 2px;
   background: linear-gradient(90deg, var(--mhs-cyan), transparent);
-  border-radius: 2px; flex: none; margin-top: 2px;
+  border-radius: 2px; flex: none; margin-top: 9px;
 }
 .mhs-card a { color: var(--mhs-steel-700); text-decoration: none; }
 .mhs-card a:hover { color: var(--mhs-cyan); }
+
+/* 手机微调 */
+@media (max-width: 600px) {
+  .mhs-card { padding: 22px 20px; }
+  .mhs-card .mhs-card-title { font-size: 18px; }
+  .mhs-card .mhs-card-line { font-size: 13.5px; }
+}
 
 /* ---------- 页脚 Slogan ---------- */
 .mhs-footer-slogan {
