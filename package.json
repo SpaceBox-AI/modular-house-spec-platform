@@ -1,0 +1,15 @@
+{
+  "name": "modular-platform-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Modular House 美国市场平台 —— L1知识库 + L2动态雷达（静态站骨架）",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
