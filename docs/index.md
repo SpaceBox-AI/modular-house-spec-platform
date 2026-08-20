@@ -1,27 +1,81 @@
 ---
-layout: home
-hero:
-  name: Modular House 美国市场平台
-  text: 让中国供应商看懂并进入美国市场
-  tagline: 美标合规框架 · 标准动态雷达 · 分品类竞品对标 · 技术论证服务
-  actions:
-    - theme: brand
-      text: 进入知识库 L1
-      link: /l1/
-    - theme: alt
-      text: 动态雷达 L2
-      link: /l2/
-features:
-  - title: 知识库 L1
-    details: 美标 SPEC 框架（钢结构 / 混凝土UHPC / 木结构）、共享合规底座、材料设备中美对应。Modular House 是 spec-agent 大库的特例视图。
-    link: /l1/
-  - title: 动态雷达 L2
-    details: 分品类的竞品对标（每类最先进目标，动态刷新）+ 标准/法规异动。
-    link: /l2/
-  - title: 论证服务 L3
-    details: 产品美标初评、深化 SPEC、审批流程路径、全生命周期 stakeholder 角色 / 责任 / 义务。
-    link: /l3/
-  - title: 运营中台 L4
-    details: 知识积累沉淀，从 knowledge-channel 建筑图谱抽取「Modular House」标签内容回流共享。
-    link: /l4/
+title: SPACE‑AI Modular House — 越洋筑巢，解锁北美模块市场
 ---
+
+<!-- ============ 中文主视觉 ============ -->
+<div class="mhs-hero">
+  <div class="mhs-hero-inner">
+
+    <div class="mhs-kicker">Modular Housing · North America Market</div>
+
+    <h1 class="mhs-title">越洋筑巢<br />解锁<span class="accent">北美模块</span>市场</h1>
+
+    <div class="mhs-brand">SPACE‑AI Modular House</div>
+
+    <div class="mhs-subtitle">
+      美标范式解析<span class="dot">・</span>新规迭代洞察<span class="dot">・</span>竞品图谱萃取<span class="dot">・</span>属地认证对齐
+    </div>
+
+    <div class="mhs-hero-actions">
+      <a class="mhs-btn mhs-btn-primary" href="/spec/">进入 SPEC 框架</a>
+      <a class="mhs-btn mhs-btn-ghost" href="/l2/">动态雷达</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============ English Banner ============ -->
+<div class="mhs-english">
+  <div class="mhs-english-inner">
+    <div class="mhs-en-title">Global Modular, Tap Overseas Housing Market</div>
+    <div class="mhs-en-brand">SPACE‑AI Modular House</div>
+    <div class="mhs-en-sub">
+      US‑Standard Paradigm Analysis<span class="sep">·</span>Regulatory Iteration Insight<span class="sep">·</span>Competitor Graph Extraction<span class="sep">·</span>Local Certification Alignment
+    </div>
+  </div>
+</div>
+
+<!-- ============ 四大业务模块 ============ -->
+<div class="mhs-features">
+  <div class="mhs-features-grid">
+
+    <div class="mhs-card">
+      <div class="mhs-card-no">L1 · SPEC</div>
+      <div class="mhs-card-title"><a href="/spec/">美标范式解析</a></div>
+      <div class="mhs-card-line">完整 MasterFormat 框架 · Division 00-48</div>
+      <div class="mhs-card-line">钢结构 / 混凝土UHPC / 木结构视图</div>
+      <div class="mhs-card-line">中美材料替换换算表 · 可投用条款</div>
+    </div>
+
+    <div class="mhs-card">
+      <div class="mhs-card-no">L2 · RADAR</div>
+      <div class="mhs-card-title"><a href="/l2/">新规迭代洞察</a></div>
+      <div class="mhs-card-line">IBC / CBC / ASCE 7 / AISC 版本核对</div>
+      <div class="mhs-card-line">加州 HCD / 联邦新规动态</div>
+      <div class="mhs-card-line">分品类竞品对标目标</div>
+    </div>
+
+    <div class="mhs-card">
+      <div class="mhs-card-no">L2 · GRAPH</div>
+      <div class="mhs-card-title"><a href="/l2/competitors">竞品图谱萃取</a></div>
+      <div class="mhs-card-line">整机集成 / 结构分项 / 围护机电卫浴</div>
+      <div class="mhs-card-line">检测认证机构对标（ICC-ES / HCD / QAA）</div>
+      <div class="mhs-card-line">建筑图谱周报 · 每周滚动</div>
+    </div>
+
+    <div class="mhs-card">
+      <div class="mhs-card-no">L1 · COMPLIANCE</div>
+      <div class="mhs-card-title"><a href="/guide/">属地认证对齐</a></div>
+      <div class="mhs-card-line">美标合规路径 · 第三方检验</div>
+      <div class="mhs-card-line">insignia / Title 25 / HSC §19980</div>
+      <div class="mhs-card-line">审批流程 full-lifecycle 论证</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============ 页脚 Slogan ============ -->
+<div class="mhs-footer-slogan">
+  <div class="slogan">Empower Chinese Modular Suppliers for North‑America Market</div>
+  <div class="slogan-mark"></div>
+</div>
