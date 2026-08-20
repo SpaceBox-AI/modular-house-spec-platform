@@ -165,35 +165,36 @@
 }
 .mhs-english .mhs-en-sub .sep { color: var(--mhs-cyan); margin: 0 5px; }
 
-/* ---------- 四大业务模块：横向放宽占满整屏宽 ---------- */
+/* ---------- 四大业务模块：横向一排、总宽与 hero 横幅对齐 ---------- */
 .mhs-features {
   max-width: 100%;
   margin: 0;
-  padding: 44px 28px 8px;
+  padding: 0;
   background: var(--mhs-steel-050);
 }
 .mhs-features-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 24px;
+  /* 与 .mhs-hero-inner 完全一致：max-width + 水平 padding 对齐主标题横幅 */
   max-width: 1280px;
   margin: 0 auto;
+  padding: 48px 28px 8px;
   width: 100%;
   box-sizing: border-box;
 }
-/* 更宽屏幕下让卡片真正铺满内容区 */
+/* 更宽屏：banner 与卡片同步放宽 */
 @media (min-width: 1440px) {
-  .mhs-features { padding-left: 40px; padding-right: 40px; }
-  .mhs-features-grid { max-width: 1520px; }
+  .mhs-hero-inner, .mhs-english-inner, .mhs-features-grid { max-width: 1520px; }
 }
 @media (max-width: 1100px) { .mhs-features-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 640px)  { .mhs-features-grid { grid-template-columns: 1fr; } }
+@media (max-width: 640px)  { .mhs-features-grid { grid-template-columns: 1fr; padding-left: 20px; padding-right: 20px; } }
 
 .mhs-card {
   background: #fff;
   border: 1px solid rgba(14,70,116,0.14);
   border-radius: 16px;
-  padding: 30px 26px;
+  padding: 34px 30px;
   box-shadow: 0 4px 18px rgba(13,52,88,0.08);
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
   border-top: 3px solid var(--mhs-cyan);
@@ -208,17 +209,17 @@
   color: var(--mhs-cyan); margin-bottom: 12px;
 }
 .mhs-card .mhs-card-title {
-  font-size: 20px; font-weight: 750; color: var(--mhs-steel-800); margin-bottom: 12px;
+  font-size: 21px; font-weight: 750; color: var(--mhs-steel-800); margin-bottom: 12px;
 }
 .mhs-card .mhs-card-line {
   display: flex; align-items: center; gap: 9px;
-  font-size: 13.5px; color: var(--mhs-muted); margin-bottom: 9px;
-  line-height: 1.5;
+  font-size: 14px; color: var(--mhs-muted); margin-bottom: 10px;
+  line-height: 1.55;
 }
 .mhs-card .mhs-card-line::before {
   content: ""; width: 15px; height: 2px;
   background: linear-gradient(90deg, var(--mhs-cyan), transparent);
-  border-radius: 2px; flex: none; margin-top: 1px;
+  border-radius: 2px; flex: none; margin-top: 2px;
 }
 .mhs-card a { color: var(--mhs-steel-700); text-decoration: none; }
 .mhs-card a:hover { color: var(--mhs-cyan); }
