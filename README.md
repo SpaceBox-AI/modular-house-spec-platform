@@ -52,9 +52,13 @@ npm run preview      # 预览构建产物
 ## i18n
 当前 root locale=中文。未来补 `docs/en/` 内容 + 切换即英文版（用户要求一键可切）。
 
-## 部署（GitHub Pages / 静态托管）
+## 部署（GitHub Actions → Pages，自动）
+仓库：`SpaceBox-AI/modular-house-spec-platform`，部署 URL：`https://spacebox-ai.github.io/modular-house-spec-platform/`
+
+流程：推送 `main` 分支 → GitHub Actions workflow（`.github/workflows/deploy.yml`）自动 build + 发布到 GitHub Pages（Pages source 需设为 **GitHub Actions**）。
 ```bash
-NODE_OPTIONS=--max-old-space-size=2048 npm run build
-# 推 dist 到 gh-pages 或任意静态托管
+git add -A && git commit -m "..." && git push origin main
 ```
+- base 已设 `/modular-house-spec-platform/`，匹配该子路径。
+- 本地 build 检查：`NODE_OPTIONS=--max-old-space-size=2048 npm run build`。
 环境注意：macOS 无 `timeout`；npm install 偶发 SIGKILL（内存尖峰，重跑即可）。
