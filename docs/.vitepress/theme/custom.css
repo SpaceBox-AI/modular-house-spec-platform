@@ -17,7 +17,7 @@
   --mhs-ink: #0e2440;
   --mhs-muted: #56749b;           /* 冷灰蓝文字 */
   /* 统一响应式内容宽度：随浏览器屏幕流动，三区块(banner/english/卡片)严格同宽 */
-  --mhs-content-w: min(1320px, calc(100vw - clamp(48px, 8vw, 112px)));
+  --mhs-content-w: min(var(--vp-layout-max-width), calc(100vw - clamp(48px, 8vw, 112px)));
 }
 
 /* 通用内容容器（hero/english banner 用同一响应式宽度，彼此对齐）
@@ -34,10 +34,19 @@
 /* 全局冷色底 */
 .mhs-page { background: var(--mhs-steel-050); }
 
-/* ---------- 全宽突破（突破 .vp-doc 688px 正文限制，占满整个 home 屏宽） ---------- */
+/* ---------- 全宽突破（突破 .vp-doc 688px 正文限制）
+   开启全宽作背景，但用 max-width 对齐顶部导航容器(1440px)居中 →
+   hero/english/卡片 背景框左缘 = 导航标题"modular house 美国spec平台"左缘 ---------- */
 .mhs-hero,
 .mhs-english,
-.mhs-features,
+.mhs-features {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  max-width: min(100vw, var(--vp-layout-max-width));
+  box-sizing: border-box;
+}
+/* 页脚 slogan 保持真正全宽（贯通视口，作收尾） */
 .mhs-footer-slogan {
   width: 100vw;
   margin-left: calc(50% - 50vw);
