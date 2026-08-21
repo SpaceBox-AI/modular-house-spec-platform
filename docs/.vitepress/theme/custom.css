@@ -100,11 +100,11 @@
 }
 
 .mhs-hero .mhs-title {
-  font-size: clamp(42px, 6vw, 74px);
-  line-height: 1.06;
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1.12;
   font-weight: 800;
-  letter-spacing: -0.02em;
-  color: #f2f8ff;
+  letter-spacing: -0.015em;
+  color: #f4f9ff;
   margin: 0 0 24px;
   text-shadow: 0 4px 30px rgba(0,0,0,0.35);
 }
@@ -206,13 +206,14 @@
 
 /* “四个框”样式：冷色线性描边框，科技面板感 */
 .mhs-card {
-  background: rgba(255,255,255,0.6);
-  border: 1.5px solid rgba(29,78,143,0.18);
-  border-radius: 14px;
-  padding: 26px 24px;
+  background: rgba(255,255,255,0.72);
+  border: 1.5px solid rgba(29,78,143,0.22);
+  border-radius: 16px;
+  padding: 26px 24px 24px;
   position: relative;
   overflow: hidden;
-  transition: border-color .18s ease, transform .18s ease, background .18s ease;
+  box-shadow: 0 2px 10px rgba(10,25,41,0.04);
+  transition: border-color .2s ease, transform .2s ease, background .2s ease, box-shadow .2s ease;
 }
 .mhs-card::before {
   content: "";
@@ -221,16 +222,33 @@
   background: linear-gradient(90deg, var(--mhs-cyan), var(--mhs-cyan-soft));
 }
 .mhs-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   border-color: var(--mhs-cyan);
-  background: rgba(255,255,255,0.92);
+  background: #ffffff;
+  box-shadow: 0 14px 32px rgba(14,36,64,0.12);
 }
 .mhs-card .mhs-card-no {
+  display: inline-block;
   font-size: 11px; font-weight: 750; letter-spacing: 0.14em;
-  color: var(--mhs-cyan); margin-bottom: 12px;
+  color: var(--mhs-steel-700);
+  background: var(--mhs-cyan-soft);
+  border: 1px solid rgba(33,197,216,0.28);
+  border-radius: 20px;
+  padding: 4px 12px;
+  margin-bottom: 16px;
 }
 .mhs-card .mhs-card-title {
+  display: flex; align-items: center; gap: 10px;
   font-size: 20px; font-weight: 750; color: var(--mhs-steel-800); margin-bottom: 14px;
+}
+/* 卡片标题前置青绿角标图标 */
+.mhs-card .mhs-card-title::before {
+  content: "";
+  width: 14px; height: 14px;
+  flex: none;
+  background: linear-gradient(135deg, var(--mhs-cyan), #1493c9);
+  border-radius: 4px;
+  box-shadow: 0 2px 7px rgba(33,197,216,0.38);
 }
 .mhs-card .mhs-card-line {
   display: flex; align-items: flex-start; gap: 9px;
@@ -278,22 +296,23 @@
    ============================================================ */
 .VPNavBarMenuLink {
   font-size: 16px !important;
-  font-weight: 400;
+  font-weight: 500;
   padding: 7px 15px !important;      /* 扩大点击热区 */
   margin: 0 2px;
   border-radius: 8px;
+  color: #1b2b45;
   transition: background-color 0.22s ease, color 0.22s ease;
 }
 /* 鼠标悬浮：淡蓝色圆角底色块 */
 .VPNavBarMenuLink:hover {
-  background-color: rgba(40, 70, 160, 0.08);
+  background-color: rgba(40, 70, 160, 0.10);
   color: var(--mhs-steel-700);
 }
 /* 当前页面激活：高亮底色 + 文字加粗 */
 .VPNavBarMenuLink.active {
-  background-color: rgba(40, 70, 160, 0.12);
+  background-color: rgba(40, 70, 160, 0.14);
   color: #203890;
-  font-weight: 600;
+  font-weight: 650;
 }
 /* 移除 VitePress 默认的下划线装饰，避免与色块叠加 */
 .VPNavBarMenuLink:hover::after,
@@ -316,12 +335,17 @@
   transition: background-color 0.22s ease;
 }
 .VPNavScreen .VPLink:hover {
-  background-color: rgba(40, 70, 160, 0.08);
+  background-color: rgba(40, 70, 160, 0.10);
 }
 .VPNavScreen .VPLink.active {
-  background-color: rgba(40, 70, 160, 0.12);
+  background-color: rgba(40, 70, 160, 0.14);
   color: #203890;
-  font-weight: 600;
+  font-weight: 650;
+}
+
+/* 导航栏柔和阴影分隔：白底导航与深蓝 hero 平滑过渡 */
+.VPNav {
+  box-shadow: 0 1px 0 rgba(10,25,41,0.06), 0 6px 24px -12px rgba(10,25,41,0.20);
 }
 
 /* ============================================================
