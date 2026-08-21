@@ -263,8 +263,20 @@
   background: linear-gradient(90deg, var(--mhs-cyan), transparent);
   border-radius: 2px; flex: none; margin-top: 9px;
 }
-.mhs-card a { color: var(--mhs-steel-700); text-decoration: none; }
-.mhs-card a:hover { color: var(--mhs-cyan); }
+/* 整卡覆盖链接（stretched-link）：点击卡片任意位置跳转对应功能页 */
+.mhs-card .mhs-card-link {
+  position: absolute; inset: 0;
+  border-radius: inherit;
+  z-index: 1;
+  color: var(--mhs-steel-700);
+  text-decoration: none;
+}
+.mhs-card .mhs-card-link::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+}
+.mhs-card:hover .mhs-card-title {
+  color: var(--mhs-cyan);
+}
 
 /* 手机微调 */
 @media (max-width: 600px) {

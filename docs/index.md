@@ -35,31 +35,35 @@ aside: false
   <div class="mhs-features-grid">
     <div class="mhs-card">
       <div class="mhs-card-no">L1 · SPEC</div>
-      <div class="mhs-card-title"><a href="/modular-house-spec-platform/spec/">美标范式解析</a></div>
+      <div class="mhs-card-title">美标范式解析</div>
       <div class="mhs-card-line">完整 MasterFormat 框架 · Division 00-48</div>
       <div class="mhs-card-line">钢结构 / 混凝土UHPC / 木结构视图</div>
       <div class="mhs-card-line">中美材料替换换算表 · 可投用条款</div>
+      <a class="mhs-card-link" href="/modular-house-spec-platform/spec/" aria-label="进入美标范式解析"></a>
     </div>
     <div class="mhs-card">
       <div class="mhs-card-no">L2 · RADAR</div>
-      <div class="mhs-card-title"><a href="/modular-house-spec-platform/l2/">新规迭代洞察</a></div>
+      <div class="mhs-card-title">新规迭代洞察</div>
       <div class="mhs-card-line">IBC / CBC / ASCE 7 / AISC 版本核对</div>
       <div class="mhs-card-line">加州 HCD / 联邦新规动态</div>
       <div class="mhs-card-line">分品类竞品对标目标</div>
+      <a class="mhs-card-link" href="/modular-house-spec-platform/l2/" aria-label="进入新规迭代洞察"></a>
     </div>
     <div class="mhs-card">
       <div class="mhs-card-no">L2 · GRAPH</div>
-      <div class="mhs-card-title"><a href="/modular-house-spec-platform/l2/competitors">竞品图谱萃取</a></div>
+      <div class="mhs-card-title">竞品图谱萃取</div>
       <div class="mhs-card-line">整机集成 / 结构分项 / 围护机电卫浴</div>
       <div class="mhs-card-line">检测认证机构对标（ICC-ES / HCD / QAA）</div>
       <div class="mhs-card-line">建筑图谱周报 · 每周滚动</div>
+      <a class="mhs-card-link" href="/modular-house-spec-platform/l2/competitors" aria-label="进入竞品图谱萃取"></a>
     </div>
     <div class="mhs-card">
       <div class="mhs-card-no">L1 · COMPLIANCE</div>
-      <div class="mhs-card-title"><a href="/modular-house-spec-platform/guide/">属地认证对齐</a></div>
+      <div class="mhs-card-title">属地认证对齐</div>
       <div class="mhs-card-line">美标合规路径 · 第三方检验</div>
       <div class="mhs-card-line">insignia / Title 25 / HSC §19980</div>
       <div class="mhs-card-line">审批流程 full-lifecycle 论证</div>
+      <a class="mhs-card-link" href="/modular-house-spec-platform/guide/" aria-label="进入属地认证对齐"></a>
     </div>
   </div>
 </div>
