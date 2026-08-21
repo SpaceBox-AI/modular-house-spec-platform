@@ -16,8 +16,10 @@
   --mhs-cyan-soft: rgba(33,197,216,0.12);
   --mhs-ink: #0e2440;
   --mhs-muted: #56749b;           /* 冷灰蓝文字 */
-  /* 统一响应式内容宽度：随浏览器屏幕流动，三区块(banner/english/卡片)严格同宽 */
-  --mhs-content-w: min(1320px, calc(100vw - clamp(48px, 8vw, 112px)));
+  /* 统一响应式内容宽度：三区块(banner/english/卡片)严格同宽，
+     受控容器固定 1280px 上限，解决大屏单侧大片空白 */
+  --mhs-content-w: min(1280px, calc(100vw - clamp(40px, 7vw, 96px)));
+  --mhs-page-pad: 24px; /* 移动端不贴边 */
 }
 
 /* 通用内容容器（hero/english banner 用同一响应式宽度，彼此对齐）
@@ -268,4 +270,66 @@
   width: 52px; height: 3px;
   background: linear-gradient(90deg, var(--mhs-cyan), transparent);
   margin: 20px auto 0; border-radius: 3px;
+}
+
+/* ============================================================
+   导航栏：字体放大 + hover/active 色块衬底（交付文档目标3）
+   覆盖 VitePress 默认 .VPNavBarMenuLink（默认仅改文字颜色/下划线）
+   ============================================================ */
+.VPNavBarMenuLink {
+  font-size: 16px !important;
+  font-weight: 400;
+  padding: 7px 15px !important;      /* 扩大点击热区 */
+  margin: 0 2px;
+  border-radius: 8px;
+  transition: background-color 0.22s ease, color 0.22s ease;
+}
+/* 鼠标悬浮：淡蓝色圆角底色块 */
+.VPNavBarMenuLink:hover {
+  background-color: rgba(40, 70, 160, 0.08);
+  color: var(--mhs-steel-700);
+}
+/* 当前页面激活：高亮底色 + 文字加粗 */
+.VPNavBarMenuLink.active {
+  background-color: rgba(40, 70, 160, 0.12);
+  color: #203890;
+  font-weight: 600;
+}
+/* 移除 VitePress 默认的下划线装饰，避免与色块叠加 */
+.VPNavBarMenuLink:hover::after,
+.VPNavBarMenuLink.active::after {
+  display: none !important;
+}
+/* 导航栏容器：撑高到 50px（默认 40 左右） */
+.VPNavBarTitle + .content .content-body,
+.VPNavBar .wrapper {
+  height: var(--vp-nav-height);
+}
+:root {
+  --vp-nav-height: 52px;
+}
+/* 移动端折叠菜单里的色块同样生效 */
+.VPNavScreen .VPLink {
+  font-size: 16px;
+  padding: 9px 14px;
+  border-radius: 8px;
+  transition: background-color 0.22s ease;
+}
+.VPNavScreen .VPLink:hover {
+  background-color: rgba(40, 70, 160, 0.08);
+}
+.VPNavScreen .VPLink.active {
+  background-color: rgba(40, 70, 160, 0.12);
+  color: #203890;
+  font-weight: 600;
+}
+
+/* ============================================================
+   手机端 padding 保护：三区块内容与导航对齐、不贴屏幕边缘
+   ============================================================ */
+@media (max-width: 600px) {
+  .mhs-hero { padding: 72px 0 64px; }
+  .mhs-hero-inner, .mhs-english-inner, .mhs-features-grid {
+    padding-inline: 20px;
+  }
 }

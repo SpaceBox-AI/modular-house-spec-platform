@@ -6,7 +6,7 @@ title: SPACE‑AI Modular House — 越洋筑巢，解锁模块建筑市场
 <div class="mhs-hero">
   <div class="mhs-hero-inner">
     <div class="mhs-kicker">Modular Housing · North America Market</div>
-    <h1 class="mhs-title">越洋筑巢<br />解锁<span class="accent">模块建筑</span>市场</h1>
+    <h1 class="mhs-title">越洋筑巢 —— 解锁<span class="accent">北美模块化建筑</span>市场</h1>
     <div class="mhs-brand">SPACE‑AI Modular House</div>
     <div class="mhs-subtitle">
       美标范式解析<span class="dot">・</span>新规迭代洞察<span class="dot">・</span>竞品图谱萃取<span class="dot">・</span>属地认证对齐
