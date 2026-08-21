@@ -1,5 +1,6 @@
 ---
 title: SPACE‑AI Modular House — 越洋筑巢，解锁模块建筑市场
+aside: false
 ---
 
 [//]: # (===== 中文主视觉 =====)

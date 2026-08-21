@@ -62,7 +62,10 @@
 .mhs-hero {
   position: relative;
   padding: 96px 0 84px;
-  margin: 0;
+  /* 全宽突破：不可用 margin:0 覆盖，必须保留两侧全宽 margin，
+     否则 width:100vw 会以 .vp-doc(左偏容器) 为包含块，整体错位且横向溢出 */
+  margin: 0 calc((100% - 100vw) / 2);
+  width: 100vw;
   /* 深蓝科技底 + 青色光晕 + 细微网格纹理 */
   background:
     radial-gradient(1000px 480px at 12% -8%, var(--mhs-cyan-soft), transparent 58%),
@@ -161,7 +164,7 @@
 .mhs-hero-actions .mhs-btn-ghost:hover { border-color: var(--mhs-cyan); color: #fff; }
 
 /* ---------- English Banner ---------- */
-.mhs-english { margin: 0; padding: 0; background: #fff; }
+.mhs-english { margin: 0 calc((100% - 100vw) / 2); padding: 0; background: #fff; }
 .mhs-english-inner {
   /* 宽度/居中 由统一容器控制 */
   padding: 40px 0 34px;
@@ -185,7 +188,7 @@
 /* ---------- 四大业务模块：四个等宽描边框，两侧贴 Banner 对齐，随屏适配 ---------- */
 .mhs-features {
   max-width: 100vw; /* 关键：必须为 100vw 而非 100%，否则被 .vp-doc 窄父钳制，无法全宽铺满 */
-  margin: 0;
+  margin: 0 calc((100% - 100vw) / 2);
   padding: 52px 0 20px;
   background: linear-gradient(180deg, #f0f5fb 0%, #eef3fb 100%);
 }
@@ -272,7 +275,7 @@
 
 /* ---------- 页脚 Slogan ---------- */
 .mhs-footer-slogan {
-  margin: 0;
+  margin: 0 calc((100% - 100vw) / 2);
   padding: 52px 24px;
   text-align: center;
   background:
@@ -346,6 +349,40 @@
 /* 导航栏柔和阴影分隔：白底导航与深蓝 hero 平滑过渡 */
 .VPNav {
   box-shadow: 0 1px 0 rgba(10,25,41,0.06), 0 6px 24px -12px rgba(10,25,41,0.20);
+}
+
+/* 消除 VitePress .wrapper 的水平 padding，使 .container 相对全宽导航居中 */
+.VPNavBar .wrapper {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* 修复 VitePress 导航折叠断点：768px 恰好是汉堡隐藏的 min-width 边界，
+   但 768~960px 之间横向菜单放不下 7 项+extra，产生横向溢出。
+   强制其在此区间折叠成汉堡菜单（VitePress 默认 min-width:768px 即显示横向菜单） */
+@media (max-width: 959px) {
+  .VPNavBarHamburger {
+    display: flex !important;
+  }
+  .VPNavBarMenu {
+    display: none !important;
+  }
+}
+
+/* ============================================================
+   导航与主体内容左右对齐修复（交付文档补充 V1）
+   根因：VitePress 默认导航容器上限 1376px，而主体内容收拢在
+   1280px（--mhs-content-w），两者左右边界错开，视觉不齐。
+   解法：把导航内部容器也约束到与主体完全一致的 --mhs-content-w，
+   margin:0 auto 使其与 hero/卡片共用同一水平和左右边界。
+   ============================================================ */
+.VPNavBar .container {
+  width: var(--mhs-content-w) !important;
+  max-width: 100%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-inline: 0;
+  box-sizing: border-box;
 }
 
 /* ============================================================
