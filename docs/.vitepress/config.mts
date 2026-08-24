@@ -60,6 +60,7 @@ export default defineConfig({
                 { text: '钢结构类型总览', link: '/spec/types/steel' },
                 { text: '　├ 解决方案A 整箱 Volumetric', link: '/spec/types/steel-volumetric' },
                 { text: '　└ 解决方案B 逐层框架+内装', link: '/spec/types/steel-frame-interior' },
+                { text: '　　　· SPEC关键字段登记(P0-P3)', link: '/spec/types/steel-frame-interior-fields' },
                 { text: '　　　· 合规核对清单(FBH)', link: '/spec/types/steel-frame-interior-compliance' },
                 { text: '　　　· 性能表：05 12 结构钢框架', link: '/spec/types/steel-frame-interior-0512' },
                 { text: '　　　· 性能表：06 16 内衬面板', link: '/spec/types/steel-frame-interior-0616' },
