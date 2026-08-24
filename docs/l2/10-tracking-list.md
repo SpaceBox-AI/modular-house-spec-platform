@@ -41,8 +41,8 @@
 | 竞品 | 类别标杆理由 | 跟踪点 | 频率 |
 |---|---|---|---|
 | **围护：保温/门窗（EnergyStar/BAA）** | EnergyStar 认证门窗、UL 封堵 | 新效率等级、NAFS 修订 | 季 |
-| **MEP：汉尔姆** 等中方对标 | 模块 MEP 快接（对标 snap MEP） | 接口标准、预制率 | 月 |
-| **卫浴：sekisui/TOTO/汉尔姆 washroom** | 预装整体卫浴模块 | 新品、ASME A112/WaterSense 合规 | 月 |
+| **MEP：供应商** 等中方对标 | 模块 MEP 快接（对标 snap MEP） | 接口标准、预制率 | 月 |
+| **卫浴：sekisui/TOTO/供应商 washroom** | 预装整体卫浴模块 | 新品、ASME A112/WaterSense 合规 | 月 |
 
 ### B4. 检测/认证/第三方（QA/QAA/ESR 服务方）
 | 竞品/服务方 | 类别标杆理由 | 跟踪点 | 频率 |

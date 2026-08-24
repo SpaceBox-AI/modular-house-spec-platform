@@ -9,7 +9,7 @@
 | 供应链形态 | 工厂供什么 | 现场做什么 | 代表企业 | SPEC 路径 |
 |---|---|---|---|---|
 | **A. 整箱 Volumetric 整合商** | 整箱模块（含结构+内装+机电）在工厂完成 | 现场只吊装+连接+调试 | CIMC-MBS、Stack | [→ 进入 Volumetric 视图](steel-volumetric) |
-| **B. 逐层钢框架 + 内装/部品** | 钢框架（梁柱铰接、可选耗能器）+ 装配式内装/机电管线部品 | 现场组装框架 + 拼装内装/管线 | **汉尔姆 halumm**（本项目示范） | [→ 进入 逐层框架+内装 视图](steel-frame-interior) |
+| **B. 逐层钢框架 + 内装/部品** | 钢框架（梁柱铰接、可选耗能器）+ 装配式内装/机电管线部品 | 现场组装框架 + 拼装内装/管线 | **供应商**（本项目示范） | [→ 进入 逐层框架+内装 视图](steel-frame-interior) |
 
 > **形态对比一句话**：解决方案 A 赌"整体交付与吊装效率"，解决方案 B 赌"框架做轻、内装/管线可拆改、货运灵活"。两者都走钢结构美标主线，但合规重心（AISC Qc/Qa、工厂检验、FAT/SAT 停点）落点不同。
 
@@ -45,10 +45,10 @@
 
 > 本页是钢结构类型**入口导航**。完整 DEG 章节条款：
 > - 走 **解决方案 A** → 见 `spec/types/steel-volumetric`
-> - 走 **解决方案 B**（汉尔姆案例）→ 见 `spec/types/steel-frame-interior`（含在线填表入口）
+> - 走 **解决方案 B**（供应商案例）→ 见 `spec/types/steel-frame-interior`（含在线填表入口）
 > - 钢结构通用 Division 完整条款 → 见 `spec/divisions/*`
 
 ## 引导来源
 - `guide/` 钢结构相关（01 base + 07 section-detail）
 - `spec/divisions/05`、`spec/divisions/13`、`spec/divisions/21-28`
-- 汉尔姆案例：`output/汉尔姆_SPEC分章节_加州完整版`
+- 供应商案例：`output/供应商_SPEC分章节_加州完整版`

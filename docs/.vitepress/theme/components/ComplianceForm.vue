@@ -1,11 +1,11 @@
 <template>
-  <div class="halumm-comp">
+  <div class="supplier-comp">
     <table class="inputs">
       <thead>
         <tr>
           <th style="width:34%">合规核对项</th>
           <th style="width:30%">加州要求 / 参考路径</th>
-          <th>汉尔姆状态（下拉选择）</th>
+          <th>供应商状态（下拉选择）</th>
           <th>备注 / 证据编号</th>
         </tr>
       </thead>
@@ -31,14 +31,14 @@
     </div>
 
     <hr />
-    <h3 class="out-title">预览：汉尔姆合规核对清单</h3>
+    <h3 class="out-title">预览：供应商合规核对清单</h3>
     <div v-show="showOut">
       <div class="sum">
         待确认 <b>{{ nPending }}</b> 项 ｜ 已确认 <b>{{ nDone }}</b> 项 ｜ 不适用 <b>{{ nNa }}</b> 项 ｜ 完成率 <b>{{ pct }}</b>%
       </div>
       <table class="out" ref="outTable">
         <thead>
-          <tr><th>合规核对项</th><th>加州要求 / 参考路径</th><th>汉尔姆状态</th><th>备注 / 证据编号</th></tr>
+          <tr><th>合规核对项</th><th>加州要求 / 参考路径</th><th>供应商状态</th><th>备注 / 证据编号</th></tr>
         </thead>
         <tbody>
           <tr v-for="(r, i) in rows" :key="i">
@@ -113,7 +113,7 @@ function copy(value, okMsg) {
 }
 
 function copyMarkdown() {
-  const head = ['| 合规核对项 | 加州要求 / 参考路径 | 汉尔姆状态 | 备注/证据编号 |', '|---|---|---|---|']
+  const head = ['| 合规核对项 | 加州要求 / 参考路径 | 供应商状态 | 备注/证据编号 |', '|---|---|---|---|']
   const body = props.rows.map((r, i) =>
     `| ${r.k} | ${r.ref} | ${status[i]} | ${notes[i] || '—'} |`)
   const sum = `（完成率 ${pct}%：${nDone} 已确认 / ${nPending} 待确认 / ${nNa} 不适用）`
@@ -127,7 +127,7 @@ function copyHtml() {
 </script>
 
 <style scoped>
-.halumm-comp { font-family: "PingFang SC", "STHeiti", Arial, sans-serif; font-size: 13px; }
+.supplier-comp { font-family: "PingFang SC", "STHeiti", Arial, sans-serif; font-size: 13px; }
 table.inputs { width: 100%; border-collapse: collapse; margin: 8px 0; }
 table.inputs th, table.inputs td { border: 1px solid #ccc; padding: 6px 8px; vertical-align: middle; }
 table.inputs th { background: #4a235a; color: #fff; }

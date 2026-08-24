@@ -4,7 +4,7 @@
 > Modular House 是 spec-agent 大库（MasterFormat 母本）的特例视图：此处呈现其在模块化装配式语境下的完整章节树。
 
 <div class="mhs-switch-banner">
-  🏗️ 本页为 **Division 仪表盘（跨类型通用）**；如要看**汉尔姆解决方案 B 全部 SECTION 总入口**，请到 <a href="types/steel-frame-interior">总入口页 →</a>
+  🏗️ 本页为 **Division 仪表盘（跨类型通用）**；如要看**供应商解决方案 B 全部 SECTION 总入口**，请到 <a href="types/steel-frame-interior">总入口页 →</a>
 </div>
 
 ## 导航方式

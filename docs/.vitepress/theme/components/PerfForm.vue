@@ -1,11 +1,11 @@
 <template>
-  <div class="halumm-perf">
+  <div class="supplier-perf">
     <table class="inputs">
       <thead>
         <tr>
           <th style="width:26%">性能指标</th>
           <th style="width:35%">美标参考值</th>
-          <th>汉尔姆填写值</th>
+          <th>供应商填写值</th>
           <th style="width:22%">标准</th>
         </tr>
       </thead>
@@ -31,7 +31,7 @@
     <div v-show="showOut">
       <table class="out" ref="outTable">
         <thead>
-          <tr><th>性能指标</th><th>美标参考值</th><th>汉尔姆填写值</th><th>标准</th></tr>
+          <tr><th>性能指标</th><th>美标参考值</th><th>供应商填写值</th><th>标准</th></tr>
         </thead>
         <tbody>
           <tr v-for="(r, i) in rows" :key="i">
@@ -95,7 +95,7 @@ function copy(value, okMsg) {
 }
 
 function copyMarkdown() {
-  const head = ['| 性能指标 | 美标参考值 | 汉尔姆填写值 | 标准 |', '|---|---|---|---|']
+  const head = ['| 性能指标 | 美标参考值 | 供应商填写值 | 标准 |', '|---|---|---|---|']
   const body = props.rows.map((r, i) =>
     `| ${r.k} | ${r.ref} | ${vals[i] || '（待填）'} | ${r.std} |`)
   const title = props.sectionLabel ? props.sectionLabel + '\n\n' : ''
@@ -108,7 +108,7 @@ function copyHtml() {
 </script>
 
 <style scoped>
-.halumm-perf { font-family: "PingFang SC", "STHeiti", Arial, sans-serif; font-size: 13px; }
+.supplier-perf { font-family: "PingFang SC", "STHeiti", Arial, sans-serif; font-size: 13px; }
 table.inputs { width: 100%; border-collapse: collapse; margin: 8px 0; }
 table.inputs th, table.inputs td { border: 1px solid #ccc; padding: 6px 8px; vertical-align: middle; }
 table.inputs th { background: #1a3d6d; color: #fff; }

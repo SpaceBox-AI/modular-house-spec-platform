@@ -22,8 +22,8 @@
 ## B3 围护 / 机电 / 卫浴
 
 - EnergyStar/BAA 门窗、UL 封堵
-- 汉尔姆 MEP 快接（对标 snap MEP）
-- sekisui/TOTO/汉尔姆 washroom 整体卫浴
+- 供应商 MEP 快接（对标 snap MEP）
+- sekisui/TOTO/供应商 washroom 整体卫浴
 
 ## B4 检测 / 认证 / 第三方
 
