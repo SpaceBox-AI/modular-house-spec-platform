@@ -57,7 +57,12 @@ export default defineConfig({
             {
               text: '结构类型视图',
               items: [
-                { text: '钢结构（volumetric）', link: '/spec/types/steel' },
+                { text: '钢结构类型总览', link: '/spec/types/steel' },
+                { text: '　├ 形态A 整箱 Volumetric', link: '/spec/types/steel-volumetric' },
+                { text: '　└ 形态B 逐层框架+内装', link: '/spec/types/steel-frame-interior' },
+                { text: '　　　└ 性能表：05 12 结构钢框架', link: '/spec/types/steel-frame-interior-0512' },
+                { text: '　　　└ 性能表：06 16 内衬面板', link: '/spec/types/steel-frame-interior-0616' },
+                { text: '　　　└ 性能表：22/26 机电快接', link: '/spec/types/steel-frame-interior-mech' },
                 { text: '混凝土 / UHPC', link: '/spec/types/concrete-uhpc' },
                 { text: '木结构 / CLT', link: '/spec/types/wood' },
               ],
