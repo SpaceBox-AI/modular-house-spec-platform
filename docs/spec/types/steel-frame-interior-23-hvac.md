@@ -10,6 +10,7 @@
 - **美标参考值**：按美标给出的验收基准（不可改）。**汉尔姆填写值**：输入框逐项填贵司实测/设计值。**标准**：来源规范。
 
 <PerfForm
+  sectionLabel="23 33/23 70 电热 & 全空气新风（可选）"
   :rows='[{ k: "电热设备认证", ref: "UL 列名 + Title 24 节能", std: "UL / CEC" }, { k: "空调能效", ref: "AHRI 认证 + ASHRAE 90.1", std: "AHRI / ASHRAE" }, { k: "冷媒 GWP", ref: "加州 < 750（2025+）", std: "EPA SNAP / CEC" }, { k: "新风率", ref: "ASHRAE 62.2", std: "ASHRAE" }, { k: "制冷/制热能力", ref: "依项目荷载", std: "AHRI" }]'
 />
 

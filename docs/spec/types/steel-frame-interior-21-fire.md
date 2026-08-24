@@ -10,6 +10,7 @@
 - **美标参考值**：按美标给出的验收基准（不可改）。**汉尔姆填写值**：输入框逐项填贵司实测/设计值。**标准**：来源规范。
 
 <PerfForm
+  sectionLabel="21 消防系统"
   :rows='[{ k: "喷淋系统", ref: "NFPA 13 / 13R 设计+水压", std: "NFPA / CFC" }, { k: "喷头认证", ref: "UL / FM 认证", std: "UL / FM" }, { k: "消防报警", ref: "NFPA 72 + UL 864", std: "NFPA / CFC" }, { k: "抗震支吊架", ref: "依 CBC", std: "CBC" }]'
 />
 

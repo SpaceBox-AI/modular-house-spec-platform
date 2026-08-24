@@ -10,6 +10,7 @@ SI 给排水管线系统：微负压排水（防臭防漏）、同层排水、�
 - **美标参考值**：按美标给出的验收基准（不可改）。**汉尔姆填写值**：输入框逐项填贵司实测/设计值。**标准**：来源规范。
 
 <PerfForm
+  sectionLabel="22 00/22 13 给排水管线（SI 微负压排水）"
   :rows='[{ k: "涉水材料认证", ref: "NSF/ANSI 61 认证", std: "NSF/ANSI 61" }, { k: "给水管材", ref: "ASTM B88 / PEX F876", std: "ASTM / CPLC" }, { k: "排水管材", ref: "ASTM D2729 / D2665", std: "ASTM / CPLC" }, { k: "微负压排水（防臭防漏）", ref: "气密性测试、同层排水", std: "IAPMO / CPLC" }, { k: "管道压力试验", ref: "依 CPLC 压力/坡度", std: "CPLC (P5)" }, { k: "气液分离", ref: "依设计", std: "IAPMO" }, { k: "可原位更换", ref: "SI 分离界面", std: "制造商" }]'
 />
 

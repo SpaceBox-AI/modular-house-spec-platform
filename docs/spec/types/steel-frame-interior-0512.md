@@ -10,6 +10,7 @@
 - **验收/测试标准**：来源规范，用于核验。
 
 <PerfForm
+  sectionLabel="05 12 00 结构钢框架"
   :rows='[
     { k: "主框架屈服强度", ref: "≥ 345 MPa (50 ksi)", std: "ASTM A992" },
     { k: "主框架抗拉强度", ref: "450–620 MPa", std: "ASTM A992" },

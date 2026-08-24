@@ -10,6 +10,7 @@
 - **美标参考值**：按美标给出的验收基准（不可改）。**汉尔姆填写值**：输入框逐项填贵司实测/设计值。**标准**：来源规范。
 
 <PerfForm
+  sectionLabel="13 48 00 抗震 & 声学连接"
   :rows='[{ k: "抗震连接", ref: "依 ASCE 7 / CBC 设计", std: "ASCE 7 / CBC" }, { k: "模块间接振连续", ref: "依设计", std: "ASCE 7" }, { k: "隔声 STC / IIC", ref: "依分区（Title 24 声学可选）", std: "ASTM E90/E492" }, { k: "耗能器（选配）", ref: "等效验证报告", std: "ICC-ES / OSHPD" }]'
 />
 
