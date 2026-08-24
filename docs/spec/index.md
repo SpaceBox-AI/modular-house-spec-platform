@@ -3,6 +3,10 @@
 > 本站**主目录导航骨架** = 一套由 12 份引导文件推导出的**完整版美标 MasterFormat SPEC 框架**（Division 00-48）。
 > Modular House 是 spec-agent 大库（MasterFormat 母本）的特例视图：此处呈现其在模块化装配式语境下的完整章节树。
 
+<div class="mhs-switch-banner">
+  🏗️ 本页为 **Division 仪表盘（跨类型通用）**；如要看**汉尔姆解决方案 B 全部 SECTION 总入口**，请到 <a href="types/steel-frame-interior">总入口页 →</a>
+</div>
+
 ## 导航方式
 
 有两种浏览方式（同一套内容，两种挂载）：

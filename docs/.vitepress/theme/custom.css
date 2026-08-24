@@ -406,3 +406,25 @@
     padding-inline: 20px;
   }
 }
+
+/* ============================================================
+   浏览方式切换横幅（Division 仪表盘 ↔ 汉尔姆总入口自由切换）
+   ============================================================ */
+.mhs-switch-banner {
+  margin: 18px 0 26px;
+  padding: 12px 16px;
+  background: linear-gradient(90deg, #f0f6ff, #f7fafd);
+  border: 1px solid #cfdff0;
+  border-left: 4px solid #1a3d6d;
+  border-radius: 6px;
+  color: #334455;
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+.mhs-switch-banner a {
+  color: #1a3d6d;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: #a9c3dd;
+  text-underline-offset: 3px;
+}

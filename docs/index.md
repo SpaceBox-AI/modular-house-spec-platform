@@ -13,8 +13,8 @@ aside: false
       美标范式解析<span class="dot">・</span>新规迭代洞察<span class="dot">・</span>竞品图谱萃取<span class="dot">・</span>属地认证对齐
     </div>
     <div class="mhs-hero-actions">
-      <a class="mhs-btn mhs-btn-primary" href="/modular-house-spec-platform/spec/">进入 SPEC 框架</a>
-      <a class="mhs-btn mhs-btn-ghost" href="/modular-house-spec-platform/l2/">动态雷达</a>
+      <a class="mhs-btn mhs-btn-primary" href="/modular-house-spec-platform/spec/types/steel-frame-interior">进入 SPEC 总入口</a>
+      <a class="mhs-btn mhs-btn-ghost" href="/modular-house-spec-platform/spec/">Division 仪表盘</a>
     </div>
   </div>
 </div>
