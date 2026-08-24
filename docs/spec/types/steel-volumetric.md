@@ -1,6 +1,6 @@
-# 钢结构视图 · 形态 A：整箱 Volumetric 整合商
+# 钢结构视图 · 解决方案 A：整箱 Volumetric 整合商
 
-> 供应链形态 A —— **整箱 Volumetic Modular**：工厂把结构+内装+机电做进整箱模块，现场只做吊装+连接+调试。代表企业：CIMC-MBS、Stack。
+> 供应链解决方案 A —— **整箱 Volumetic Modular**：工厂把结构+内装+机电做进整箱模块，现场只做吊装+连接+调试。代表企业：CIMC-MBS、Stack。
 > 回到 [钢结构类型总览](steel)。
 
 ## 本形态适用 Division 覆盖矩阵
